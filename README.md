@@ -40,7 +40,9 @@ management
 │
 ├── run.py                 
 server
-└── README.md             
+|--README.md
+|--Screenshot against test client 
+|--Screenshot of test suite             
 ```
 
 ## Usage
