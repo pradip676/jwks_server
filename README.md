@@ -47,6 +47,10 @@ pip3 install flask cryptography pyjwt pytest pytest-cov flake8
 ```bash
 python3 run.py
 ```
+or,
+```bash
+python run.py
+```
 The server will start on `http://127.0.0.1:8080`
 
 ### Endpoints
@@ -92,6 +96,34 @@ Ensure the code follows PEP8 guidelines using flake8:
 ```bash
 flake8 app/
 ```
+## Testing the Server Manually
+
+### 1. Get a Valid JWT:
+```bash
+curl -X POST http://127.0.0.1:8080/auth
+```
+
+### 2. Get Public Keys (JWKS):
+```bash
+curl -X GET http://127.0.0.1:8080/.well-known/jwks.json
+```
+
+Sample output:
+```json
+{
+  "keys": [
+    {
+      "alg": "RS256",
+      "e": "AQAB",
+      "kid": "58d8b280-66fd-4f6b-b47b-d0c0ebc8b974",
+      "kty": "RSA",
+      "n": "q6jdjMX6icdCC4JrhDYcF9aINY8ZfgR...",
+      "use": "sig"
+    }
+  ]
+}
+```
+
 ## Run the test client
 ```bash
 ./gradebot project1
