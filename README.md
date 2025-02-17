@@ -27,7 +27,7 @@ pip3 install flask cryptography pyjwt pytest pytest-cov flake8
 
 ## Project Structure
 ```
- -------------- jwks_server --------------
+-------------- jwks_server --------------
                     |         
   --------------------------------------------
   |                 |                        |  
