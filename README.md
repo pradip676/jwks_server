@@ -27,22 +27,18 @@ pip3 install flask cryptography pyjwt pytest pytest-cov flake8
 
 ## Project Structure
 ```
-jwks_server/
-│
-├── app/
-│   ├── __init__.py        
-│   ├── key_manager.py     
-management
-│   └── routes.py          
-│
-├── tests/
-│   └── test_routes.py     
-│
-├── run.py                 
-server
-|--README.md
-|--Screenshot against test client 
-|--Screenshot of test suite             
+ -------------- jwks_server --------------
+                    |         
+  --------------------------------------------
+  |                 |                        |  
+ app/             tests/               (root files)
+  |                 |                        |
+  |                 |              --------------------------------
+  |         |       |             |      |            |           |
+ __init__.py   test_routes.py  run.py   README.md     |     SS of test client
+ key_manager.py                                 SS of test Suite
+ routes.py
+            
 ```
 
 ## Usage
@@ -75,7 +71,7 @@ PYTHONPATH=$(pwd) pytest tests/
 ```bash
 PYTHONPATH=$(pwd) pytest --cov=app tests/
 ```
-or 
+or, 
 ```bash
 pytest --cov=app tests/
 ```
