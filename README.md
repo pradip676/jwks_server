@@ -132,6 +132,7 @@ Sample output:
 
 ## Run the test client
 ```bash
+cd ~/Downloads/CSCE3550_Darwin_arm64
 ./gradebot project1
 ```
 ## Gradebot output
