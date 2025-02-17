@@ -102,6 +102,12 @@ flake8 app/
 ```bash
 curl -X POST http://127.0.0.1:8080/auth
 ```
+Sample output:
+```json
+{
+  "token": "eyJhbGciOiJSUzI1NiIsInR5c..."
+}
+```
 
 ### 2. Get Public Keys (JWKS):
 ```bash
